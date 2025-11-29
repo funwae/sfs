@@ -47,22 +47,23 @@ export default function ToolsStrip() {
           </span>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
           {tools.map((tool) => (
             <article
               key={tool.name}
-              className="group rounded-2xl border border-white/5 border-t-forge-ember/70 bg-gradient-to-b from-white/5 to-black/40 p-5 shadow-[0_18px_35px_rgba(0,0,0,0.75)] transition hover:-translate-y-1 hover:border-forge-ember/90 hover:shadow-forge-glow"
+              className="group rounded-2xl border border-white/5 border-t-forge-ember/70 bg-gradient-to-b from-white/5 to-black/40 p-5 shadow-[0_18px_35px_rgba(0,0,0,0.75)] transition-all duration-300 hover:-translate-y-1 hover:border-forge-ember/90 hover:shadow-forge-glow"
             >
               <div className="mb-6 flex items-center gap-3">
-                <div className="relative h-10 w-10 overflow-hidden rounded-xl bg-black/70">
+                <div className="relative h-10 w-10 flex-shrink-0 overflow-hidden rounded-xl bg-black/70">
                   <Image
                     src={tool.image}
-                    alt={tool.name}
+                    alt={`${tool.name} logo`}
                     fill
                     className="object-contain p-1.5"
+                    loading="lazy"
                   />
                 </div>
-                <h3 className="text-sm font-semibold">
+                <h3 className="text-sm font-semibold leading-tight">
                   <a
                     href={tool.href}
                     target={tool.href.startsWith("http") ? "_blank" : undefined}
@@ -71,13 +72,14 @@ export default function ToolsStrip() {
                         ? "noreferrer noopener"
                         : undefined
                     }
-                    className="hover:text-forge-ember"
+                    className="hover:text-forge-ember transition-colors"
+                    aria-label={`Learn more about ${tool.name}`}
                   >
                     {tool.name}
                   </a>
                 </h3>
               </div>
-              <p className="text-xs text-forge-steel">{tool.tagline}</p>
+              <p className="text-xs leading-relaxed text-forge-steel">{tool.tagline}</p>
             </article>
           ))}
         </div>

@@ -55,6 +55,7 @@ export default function StudioIdentity() {
                 alt="SanForge Studio logo."
                 fill
                 className="rounded-full bg-black/90 p-5 shadow-forge-glow"
+                loading="lazy"
               />
             </div>
             <p className="max-w-xs text-center text-xs text-forge-steel">

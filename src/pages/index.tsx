@@ -5,6 +5,7 @@ import ProjectGrid from "@/components/ProjectGrid";
 import PartnerLogos from "@/components/PartnerLogos";
 import StudioIdentity from "@/components/StudioIdentity";
 import CTAFooter from "@/components/CTAFooter";
+import BackToTop from "@/components/BackToTop";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <PartnerLogos />
       <StudioIdentity />
       <CTAFooter />
+      <BackToTop />
     </Layout>
   );
 }

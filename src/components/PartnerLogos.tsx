@@ -24,13 +24,14 @@ export default function PartnerLogos() {
             {partners.map((p) => (
               <div
                 key={p.name}
-                className="relative h-10 w-16 opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0"
+                className="relative h-10 w-16 opacity-70 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 hover:scale-110"
               >
                 <Image
                   src={p.logo}
-                  alt={p.name}
+                  alt={`${p.name} partner logo`}
                   fill
                   className="object-contain"
+                  loading="lazy"
                 />
               </div>
             ))}

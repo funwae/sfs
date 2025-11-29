@@ -19,16 +19,18 @@ export default function CTAFooter() {
             </div>
 
             <div className="space-y-3 text-sm">
-              <div className="grid gap-3 md:grid-cols-2">
+              <div className="grid gap-3 sm:grid-cols-1 md:grid-cols-2">
                 <a
                   href="mailto:info@sanforgestudio.com?subject=Publishing%20or%20partnership%20inquiry"
-                  className="inline-flex items-center justify-center rounded-full bg-forge-red px-6 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-white shadow-forge-glow transition hover:bg-forge-crimson focus-visible:focus-ring"
+                  className="inline-flex items-center justify-center rounded-full bg-forge-red px-6 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-white shadow-forge-glow transition-all duration-300 hover:bg-forge-crimson hover:scale-105 focus-visible:focus-ring"
+                  aria-label="Contact SanForge Studio about publishing or partnerships"
                 >
                   Publishing &amp; Partnerships
                 </a>
                 <a
                   href="mailto:info@sanforgestudio.com?subject=Tools%20and%20technical%20collaboration"
-                  className="inline-flex items-center justify-center rounded-full border border-forge-red/80 px-6 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-forge-ice transition hover:border-forge-ember hover:text-forge-ember focus-visible:focus-ring"
+                  className="inline-flex items-center justify-center rounded-full border border-forge-red/80 px-6 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-forge-ice transition-all duration-300 hover:border-forge-ember hover:text-forge-ember hover:scale-105 focus-visible:focus-ring"
+                  aria-label="Contact SanForge Studio about tools and technical collaboration"
                 >
                   Tools &amp; Tech Collaboration
                 </a>
@@ -42,18 +44,20 @@ export default function CTAFooter() {
 
               <div className="mt-4 flex flex-wrap gap-4 text-xs text-forge-steel">
                 <a
-                  href="https://discord.gg"
+                  href="https://discord.gg/sanforge"
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="hover:text-forge-ember"
+                  className="hover:text-forge-ember transition-colors"
+                  aria-label="Join SanForge Studio Discord server"
                 >
                   Discord Server ↗
                 </a>
                 <a
-                  href="https://store.steampowered.com"
+                  href="https://store.steampowered.com/publisher/sanforgestudio"
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="hover:text-forge-ember"
+                  className="hover:text-forge-ember transition-colors"
+                  aria-label="View SanForge Studio on Steam"
                 >
                   Steam Publisher Page ↗
                 </a>

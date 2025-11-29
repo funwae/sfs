@@ -36,8 +36,8 @@ export default function Layout({ children }: LayoutProps) {
       <div className="min-h-screen bg-forge-night text-forge-ice">
         <header className="sticky top-0 z-40 border-b border-white/5 bg-black/70 backdrop-blur">
           <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-            <a href="#top" className="flex items-center gap-3">
-              <div className="relative h-9 w-9">
+            <a href="#top" className="flex items-center">
+              <div className="relative h-12 w-32">
                 <Image
                   src="/logo-sanforge.png"
                   alt="SanForge Studio"
@@ -46,23 +46,16 @@ export default function Layout({ children }: LayoutProps) {
                   priority
                 />
               </div>
-              <div className="flex flex-col leading-tight">
-                <span className="text-sm font-semibold tracking-wide text-forge-ice">
-                  SanForge Studio
-                </span>
-                <span className="text-[10px] uppercase tracking-[0.26em] text-forge-steel">
-                  We Built Entertainment
-                </span>
-              </div>
             </a>
 
             {/* Desktop nav */}
-            <nav className="hidden items-center gap-8 text-xs text-forge-steel md:flex">
+            <nav className="hidden items-center gap-8 text-xs text-forge-steel md:flex" aria-label="Main navigation">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="tracking-[0.24em] uppercase hover:text-forge-ice"
+                  className="tracking-[0.24em] uppercase transition-colors hover:text-forge-ember"
+                  aria-label={`Navigate to ${link.label} section`}
                 >
                   {link.label}
                 </a>

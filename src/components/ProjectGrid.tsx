@@ -52,11 +52,11 @@ export default function ProjectGrid() {
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2">
           {projects.map((project, index) => (
             <article
               key={project.name}
-              className="group overflow-hidden rounded-3xl border border-white/5 bg-forge-space/80 shadow-[0_20px_45px_rgba(0,0,0,0.9)] transition hover:-translate-y-1.5 hover:border-forge-ember/90 hover:shadow-forge-glow"
+              className="group overflow-hidden rounded-3xl border border-white/5 bg-forge-space/80 shadow-[0_20px_45px_rgba(0,0,0,0.9)] transition-all duration-300 hover:-translate-y-1.5 hover:border-forge-ember/90 hover:shadow-forge-glow"
             >
               <div
                 className={`relative w-full overflow-hidden ${
@@ -65,9 +65,10 @@ export default function ProjectGrid() {
               >
                 <Image
                   src={project.image}
-                  alt={project.name}
+                  alt={`${project.name} - ${project.blurb}`}
                   fill
                   className="object-cover transition duration-500 group-hover:scale-105"
+                  loading={index < 2 ? "eager" : "lazy"}
                 />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
                 <div className="absolute left-5 top-5 rounded-full bg-black/75 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-forge-ember">
@@ -81,7 +82,8 @@ export default function ProjectGrid() {
                   href={project.href}
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="mt-2 text-xs font-semibold uppercase tracking-[0.22em] text-forge-ember hover:underline"
+                  className="mt-2 text-xs font-semibold uppercase tracking-[0.22em] text-forge-ember hover:underline transition-colors"
+                  aria-label={`Read more about ${project.name}`}
                 >
                   Read more ↗
                 </a>
