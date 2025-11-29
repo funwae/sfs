@@ -4,6 +4,7 @@ const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -19,13 +20,13 @@ const config: Config = {
         },
       },
       boxShadow: {
-        "forge-glow": "0 0 25px rgba(225,6,0,0.5)",
+        "forge-glow": "0 0 25px rgba(225,6,0,0.55)",
       },
       backgroundImage: {
         "aurora-radial":
           "radial-gradient(circle at 0% 0%, rgba(255,61,48,0.28), transparent 55%), radial-gradient(circle at 100% 100%, rgba(225,6,0,0.45), transparent 55%)",
         "aurora-linear":
-          "linear-gradient(135deg, #0A0A0D 0%, #111117 40%, #1B0A0D 100%)",
+          "linear-gradient(135deg, #050509 0%, #0A0A0D 35%, #111117 70%, #1B0A0D 100%)",
       },
     },
   },
@@ -33,4 +34,3 @@ const config: Config = {
 };
 
 export default config;
-

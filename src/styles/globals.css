@@ -4,32 +4,15 @@
 
 :root {
   color-scheme: dark;
-  --font-heading: var(--font-montserrat), system-ui, sans-serif;
-  --font-body: var(--font-inter), system-ui, sans-serif;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
   @apply bg-forge-night text-forge-ice antialiased;
-  background-image: theme('backgroundImage.aurora-linear');
+  background-image: theme("backgroundImage.aurora-linear");
   background-attachment: fixed;
-  font-family: var(--font-body);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-heading);
-  font-weight: 700;
-}
-
-/* Simple scroll fade-in */
+/* Shared fade-in for sections */
 .section-fade {
   opacity: 0;
   transform: translateY(12px);
@@ -43,29 +26,7 @@ h6 {
   }
 }
 
-/* Smooth scroll offset for anchor links */
-section[id] {
-  scroll-margin-top: 80px;
+/* Simple focus outline helper */
+.focus-ring {
+  @apply outline-none ring-2 ring-forge-ember ring-offset-2 ring-offset-black;
 }
-
-/* Additional utility classes */
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-
-  .glow-red {
-    box-shadow: 0 0 20px rgba(225, 6, 0, 0.4);
-  }
-
-  .glow-red-strong {
-    box-shadow: 0 0 40px rgba(225, 6, 0, 0.6);
-  }
-}
-
-/* Focus styles for accessibility */
-*:focus-visible {
-  outline: 2px solid theme('colors.forge.ember');
-  outline-offset: 2px;
-}
-

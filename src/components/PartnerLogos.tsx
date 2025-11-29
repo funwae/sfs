@@ -16,7 +16,8 @@ export default function PartnerLogos() {
               Trusted Technology
             </h3>
             <p className="text-sm text-forge-steel">
-              Built on infrastructure players and developers already rely on.
+              SanForge ships on infrastructure and services used across the
+              industry—from hosting to analytics.
             </p>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
@@ -39,4 +40,3 @@ export default function PartnerLogos() {
     </section>
   );
 }
-

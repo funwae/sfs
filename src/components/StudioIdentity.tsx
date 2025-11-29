@@ -9,18 +9,22 @@ export default function StudioIdentity() {
       <div className="mx-auto max-w-6xl px-4 py-16">
         <div className="grid gap-10 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] md:items-center">
           <div className="space-y-5">
-            <h2 className="text-2xl font-semibold tracking-tight text-balance md:text-3xl">
+            <p className="text-[10px] uppercase tracking-[0.3em] text-forge-ember">
+              We Built Entertainment!
+            </p>
+            <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
               A Studio of Engineers and Storytellers
             </h2>
-            <p className="text-sm text-forge-steel text-balance">
-              SanForge Studio sits at the intersection of game design and
-              tooling. We prototype fast, ship thoughtfully, and never stop
-              tuning the player feel.
+            <p className="text-sm text-forge-steel">
+              SanForge Studio blends game design and tooling. The team focuses
+              on experiences that feel great moment to moment, and on building
+              the editor extensions and pipelines that make those experiences
+              repeatable.
             </p>
             <p className="text-sm text-forge-steel">
-              From low-poly space escapades to deep editor tooling, we treat
-              every project as an opportunity to build better workflows for
-              ourselves and other developers.
+              The result: memorable games that players of all ages can pick up
+              quickly, plus open and proprietary tools that give other
+              developers more control over their work.
             </p>
             <dl className="mt-4 grid gap-4 text-sm text-forge-ice md:grid-cols-3">
               <div>
@@ -43,20 +47,21 @@ export default function StudioIdentity() {
               </div>
             </dl>
           </div>
+
           <div className="relative mx-auto flex max-w-sm flex-col items-center gap-4">
             <div className="relative h-40 w-40">
               <Image
                 src="/logo-sanforge.png"
-                alt="SanForge Studio Logo"
+                alt="SanForge Studio logo."
                 fill
-                className="rounded-full bg-black/80 p-5 shadow-forge-glow"
+                className="rounded-full bg-black/90 p-5 shadow-forge-glow"
               />
             </div>
             <p className="max-w-xs text-center text-xs text-forge-steel">
-              We&apos;re based in the Bay Area and collaborate with teams and
-              publishers worldwide. If you&apos;re looking for a partner that
-              loves both the feel of a jump arc and the architecture behind it,
-              we should talk.
+              Based in the Bay Area, SanForge collaborates with publishers,
+              studios, and teams around the world. If you care as much about
+              the feel of a jump arc as you do about the architecture behind it,
+              you&apos;re in the right place.
             </p>
           </div>
         </div>
@@ -64,4 +69,3 @@ export default function StudioIdentity() {
     </section>
   );
 }
-

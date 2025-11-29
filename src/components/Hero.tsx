@@ -3,66 +3,84 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section
-      className="relative flex min-h-[80vh] items-center justify-center overflow-hidden border-b border-white/5"
       id="top"
+      className="relative flex min-h-screen items-center justify-center overflow-hidden border-b border-white/5"
     >
-      {/* Background: screenshot + aurora */}
+      {/* Background: game screenshot + aurora */}
       <div className="pointer-events-none absolute inset-0">
         <Image
           src="/hero_game_screenshot.png"
-          alt="SanForge game scene"
+          alt="Astronaut facing a colossal space worm above a forested planet."
           fill
-          className="object-cover opacity-80"
           priority
+          className="object-cover opacity-80"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/80 to-black/95" />
         <div className="absolute inset-0 bg-aurora-radial mix-blend-screen opacity-60" />
       </div>
-      <div className="section-fade relative z-10 mx-auto flex max-w-6xl flex-col items-center px-4 text-center md:flex-row md:items-center md:text-left">
-        <div className="flex-1 space-y-6">
-          <p className="text-xs uppercase tracking-[0.35em] text-forge-ember">
-            Game Studio · Tools Lab
+
+      {/* Logo watermark */}
+      <div className="pointer-events-none absolute -right-16 -top-16 hidden h-56 w-56 opacity-[0.06] md:block">
+        <Image
+          src="/logo-sanforge.png"
+          alt=""
+          fill
+          className="object-contain"
+        />
+      </div>
+
+      <div className="section-fade relative z-10 mx-auto flex max-w-6xl flex-col items-center px-4 text-center md:flex-row md:items-center md:gap-10 md:text-left">
+        <div className="flex-1 space-y-6 max-w-xl">
+          <p className="text-[10px] uppercase tracking-[0.38em] text-forge-ember">
+            We Built Entertainment
           </p>
-          <h1 className="text-4xl font-semibold leading-tight tracking-tight text-balance md:text-5xl">
-            Where <span className="text-forge-ember">Games</span> and{" "}
-            <span className="text-forge-ember">Technology</span> Collide
+          <h1 className="text-4xl font-semibold leading-tight tracking-tight md:text-5xl">
+            We forge{" "}
+            <span className="text-forge-ember">worlds players remember</span>{" "}
+            and the tools that power them.
           </h1>
-          <p className="max-w-xl text-sm text-forge-steel text-balance md:text-base">
-            SanForge Studio builds immersive worlds for players and powerful
-            tools for developers — from original titles like{" "}
-            <span className="text-forge-ice">World Eater</span> to the{" "}
-            <span className="text-forge-ice">Lua Node Editor</span>.
+          <p className="text-sm text-forge-steel md:text-base">
+            SanForge Studio crafts games that are easy to jump into and hard to
+            walk away from — and builds development tools like the{" "}
+            <span className="text-forge-ice">Lua Node Editor</span> that give
+            other teams the same superpowers.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3 md:justify-start">
             <a
               href="#projects"
-              className="rounded-full bg-forge-red px-6 py-2 text-sm font-semibold tracking-wide text-white shadow-forge-glow transition hover:bg-forge-crimson"
+              className="rounded-full bg-forge-red px-6 py-2 text-sm font-semibold tracking-wide text-white shadow-forge-glow transition hover:bg-forge-crimson focus-visible:focus-ring"
             >
               View Projects
             </a>
             <a
               href="#contact"
-              className="rounded-full border border-forge-red/70 px-6 py-2 text-sm font-semibold tracking-wide text-forge-ice transition hover:border-forge-ember hover:text-forge-ember"
+              className="rounded-full border border-forge-red/70 px-6 py-2 text-sm font-semibold tracking-wide text-forge-ice transition hover:border-forge-ember hover:text-forge-ember focus-visible:focus-ring"
             >
               Let&apos;s Work Together
             </a>
           </div>
         </div>
+
         <div className="mt-10 flex flex-1 justify-center md:mt-0">
           <div className="relative h-64 w-64">
             <Image
               src="/world-eater-cover.png"
-              alt="World Eater cover art"
+              alt="World Eater key art."
               fill
               className="rounded-3xl border border-white/10 object-cover shadow-[0_25px_60px_rgba(0,0,0,0.9)]"
             />
-            <div className="absolute -bottom-4 left-4 rounded-full bg-black/70 px-4 py-2 text-xs uppercase tracking-[0.22em] text-forge-ember">
-              Featured: World Eater
+            <div className="absolute -bottom-4 left-4 rounded-full bg-black/80 px-4 py-2 text-[10px] uppercase tracking-[0.22em] text-forge-ember">
+              Featured · World Eater
             </div>
           </div>
         </div>
       </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-6 left-1/2 z-10 hidden -translate-x-1/2 flex-col items-center text-[10px] uppercase tracking-[0.25em] text-forge-steel md:flex">
+        <span>Scroll</span>
+        <div className="mt-2 h-7 w-px animate-pulse bg-forge-ember/70" />
+      </div>
     </section>
   );
 }
-
